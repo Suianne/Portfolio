@@ -43,7 +43,6 @@ a:hover { color: var(--accent-glow-2); }
 section{ padding: 5rem 0; border-top: 1px solid rgba(244,240,255,0.08); }
 section:first-of-type{ border-top: none; }
 
-/* ---------- estilo de destaque em gradiente ---------- */
 .titulo-eletrico{
   background: linear-gradient(135deg, var(--accent-soft), var(--accent-glow));
   -webkit-background-clip: text;
@@ -51,7 +50,6 @@ section:first-of-type{ border-top: none; }
   background-clip: text;
 }
 
-/* ---------- header / nav ---------- */
 .navbar-configuracao{
   background-color: rgba(15,12,27,0.92);
   backdrop-filter: blur(6px);
@@ -85,7 +83,6 @@ section:first-of-type{ border-top: none; }
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(244,240,255,0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* ---------- hero ---------- */
 #topo{
   position: relative;
   padding-top: 6rem;
@@ -105,6 +102,7 @@ section:first-of-type{ border-top: none; }
   pointer-events: none;
   animation: pulsarGlow 6s ease-in-out infinite;
 }
+
 @keyframes pulsarGlow{
   0%, 100%{ opacity: 0.7; transform: translateX(-50%) scale(1); }
   50%{ opacity: 1; transform: translateX(-50%) scale(1.08); }
@@ -125,7 +123,6 @@ section:first-of-type{ border-top: none; }
 }
 .avatar img{ width: 100%; height: 100%; object-fit: cover; }
 
-/* efeito "letra a letra" só com CSS */
 .typing{
   color: var(--text-secondary);
   display: inline-block;
@@ -139,7 +136,6 @@ section:first-of-type{ border-top: none; }
 @keyframes digitar{ to { width: 26ch; } }
 @keyframes piscar{ 50% { border-color: transparent; } }
 
-/* ---------- botões ---------- */
 .btn-eletrico{
   background-color: var(--accent);
   color: #FFFFFF;
@@ -150,6 +146,7 @@ section:first-of-type{ border-top: none; }
   border-radius: 6px;
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
+
 .btn-eletrico:hover{
   background-color: var(--accent-glow);
   color: #0F0C1B;
@@ -171,7 +168,6 @@ section:first-of-type{ border-top: none; }
 }
 .icon-circle:hover{ border-color: var(--accent-glow-2); color: var(--accent-glow); }
 
-/* ---------- formação acadêmica ---------- */
 .lista-formacao{ list-style: none; padding-left: 0; }
 .lista-formacao li{
   display: flex;
@@ -187,7 +183,6 @@ section:first-of-type{ border-top: none; }
 .lista-formacao i{ color: var(--accent-glow-2); font-size: 1.2rem; margin-top: 0.15rem; }
 .lista-formacao .instituicao{ color: var(--text-secondary); font-size: 0.92rem; }
 
-/* revelação suave ao rolar a página */
 .project-card,
 .lista-formacao li{
   opacity: 0;
@@ -199,71 +194,11 @@ section:first-of-type{ border-top: none; }
   opacity: 1;
   transform: translateY(0);
 }
+
 @media (prefers-reduced-motion: reduce){
   .project-card, .lista-formacao li{ opacity: 1; transform: none; transition: none; }
 }
 
-/* ---------- hard skills ---------- */
-.skills-carrossel{
-  overflow: hidden;
-  width: 100%;
-  -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
-  mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
-}
-
-.skills-trilho{
-  display: flex;
-  gap: 1.25rem;
-  width: max-content;
-  animation: rolar 22s linear infinite;
-}
-
-.skills-carrossel:hover .skills-trilho{
-  animation-play-state: paused;
-}
-
-.skill-item{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  min-width: 120px;
-  padding: 1.3rem 1.5rem;
-  background-color: var(--surface);
-  border: 1px solid rgba(244,240,255,0.1);
-  border-radius: 10px;
-  transition: border-color 0.2s ease, transform 0.2s ease;
-}
-
-.skill-item i{
-  font-size: 1.8rem;
-  color: var(--text-secondary);
-  transition: color 0.2s ease;
-}
-
-.skill-item span{
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--text-secondary);
-  transition: color 0.2s ease;
-}
-
-.skill-item:hover{
-  border-color: var(--accent-glow-2);
-  transform: translateY(-3px);
-}
-.skill-item:hover i,
-.skill-item:hover span{
-  color: var(--accent-glow);
-}
-
-@keyframes rolar{
-  from{ transform: translateX(0); }
-  to{ transform: translateX(-50%); }
-}
-
-/* ---------- projetos ---------- */
 .project-card{
   display: flex;
   flex-direction: column;
@@ -370,7 +305,6 @@ section:first-of-type{ border-top: none; }
 .project-card-add .project-icon{ margin: 0 auto; }
 .project-card-add .project-resumo{ flex-grow: 0; }
 
-/* ---------- modal de projeto ---------- */
 .modal-content{
   background-color: var(--surface);
   border: 1px solid rgba(191,85,236,0.25);
@@ -402,7 +336,6 @@ section:first-of-type{ border-top: none; }
 }
 .btn-close:hover{ opacity: 1; }
 
-/* ---------- contato ---------- */
 .contato-item{
   display: flex;
   align-items: center;

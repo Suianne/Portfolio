@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./assets/skills-explorer.css">
 </head>
 <body>
 
@@ -111,31 +112,9 @@
     <h2 class="mb-4 text-center">Hard skills &amp; tecnologias</h2>
   </div>
 
-  <div class="skills-carrossel">
-    <div class="skills-trilho">
-      <div class="skill-item"><i class="bi bi-filetype-py"></i><span>Python</span></div>
-      <div class="skill-item"><i class="bi bi-bar-chart-line-fill"></i><span>R</span></div>
-      <div class="skill-item"><i class="bi bi-database-fill"></i><span>SQL</span></div>
-      <div class="skill-item"><i class="bi bi-graph-up"></i><span>Power BI</span></div>
-      <div class="skill-item"><i class="bi bi-eye-fill"></i><span>Visão Computacional</span></div>
-      <div class="skill-item"><i class="bi bi-cpu-fill"></i><span>Machine Learning</span></div>
-      <div class="skill-item"><i class="bi bi-motherboard-fill"></i><span>Arduino</span></div>
-      <div class="skill-item"><i class="bi bi-git"></i><span>Git</span></div>
-      <div class="skill-item"><i class="bi bi-github"></i><span>GitHub</span></div>
-      <div class="skill-item"><i class="bi bi-clipboard-data-fill"></i><span>Análise de Dados</span></div>
-
-      <!-- lista duplicada: necessária para o loop ficar contínuo, sem "salto" -->
-      <div class="skill-item" aria-hidden="true"><i class="bi bi-filetype-py"></i><span>Python</span></div>
-      <div class="skill-item" aria-hidden="true"><i class="bi bi-bar-chart-line-fill"></i><span>R</span></div>
-      <div class="skill-item" aria-hidden="true"><i class="bi bi-database-fill"></i><span>SQL</span></div>
-      <div class="skill-item" aria-hidden="true"><i class="bi bi-graph-up"></i><span>Power BI</span></div>
-      <div class="skill-item" aria-hidden="true"><i class="bi bi-eye-fill"></i><span>Visão Computacional</span></div>
-      <div class="skill-item" aria-hidden="true"><i class="bi bi-cpu-fill"></i><span>Machine Learning</span></div>
-      <div class="skill-item" aria-hidden="true"><i class="bi bi-motherboard-fill"></i><span>Arduino</span></div>
-      <div class="skill-item" aria-hidden="true"><i class="bi bi-git"></i><span>Git</span></div>
-      <div class="skill-item" aria-hidden="true"><i class="bi bi-github"></i><span>GitHub</span></div>
-      <div class="skill-item" aria-hidden="true"><i class="bi bi-clipboard-data-fill"></i><span>Análise de Dados</span></div>
-    </div>
+  <div class="container">
+    <div id="skills-explorer-root"></div>
+    <noscript>Ative o JavaScript para ver a stack interativa.</noscript>
   </div>
 </section>
 
@@ -251,6 +230,10 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+
+<!-- Componente React "Skills Explorer" (build gerado com Vite a partir de /skills-explorer-src) -->
+<script src="./assets/skills-explorer.js"></script>
+
 <script>
   // Preenche o modal com os dados do card clicado
   const modalProjeto = document.getElementById('modalProjeto');
