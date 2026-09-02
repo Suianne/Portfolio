@@ -13,7 +13,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="./assets/skills-explorer.css">
+  <link rel="stylesheet" href="./assets/projetos-explorer.css">
 </head>
+
 <body>
 
 <!-- Navbar-->
@@ -120,68 +122,7 @@
 
 <!-- Projetos em destaque, com modal de detalhes -->
 <section id="projetos">
-  <div class="container">
-    <p class="eyebrow mb-2">Portfólio</p>
-    <h2 class="mb-4">Projetos</h2>
-
-    <div class="row g-4">
-
-      <div class="col-md-6 col-lg-4">
-        <div class="project-card h-100" tabindex="0" role="button"
-             data-bs-toggle="modal" data-bs-target="#modalProjeto"
-             data-icone="bi-lungs-fill"
-             data-titulo="LungVision"
-             data-periodo="Orientação de projeto · em andamento"
-             data-tags="Visão Computacional,Python,Redes Neurais,CNN"
-             data-descricao="Projeto que utiliza redes neurais convolucionais (CNN) para identificar doenças pulmonares a partir de imagens de raio-X, com o objetivo de apoiar triagem e diagnóstico precoce. Suianne orienta o desenvolvimento do modelo e o fluxo de processamento das imagens."
-             data-link="">
-          <div class="project-card-topo">
-            <span class="project-icon"><i class="bi bi-lungs-fill"></i></span>
-            <span class="project-tag-status">Orientação</span>
-          </div>
-          <h3 class="project-titulo">LungVision</h3>
-          <p class="project-resumo">Redes neurais convolucionais para identificar doenças pulmonares em imagens de raio-X.</p>
-          <div class="project-tags">
-            <span>Visão Computacional</span>
-            <span>CNN</span>
-          </div>
-          <span class="project-ver">Ver detalhes <i class="bi bi-arrow-up-right"></i></span>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="project-card h-100" tabindex="0" role="button"
-             data-bs-toggle="modal" data-bs-target="#modalProjeto"
-             data-icone="bi-shield-lock-fill"
-             data-titulo="Automação em Criptografia Quântica"
-             data-periodo="Iniciação Tecnológica · QuIIN"
-             data-tags="Python,Automação,Aquisição de Dados,Criptografia Quântica"
-             data-descricao="Como bolsista de Iniciação Tecnológica no Centro de Competências em Tecnologias Quânticas (QuIIN), Suianne aplica automação, aquisição e processamento de dados a sistemas de criptografia quântica, dando suporte à experimentação em laboratório."
-             data-link="">
-          <div class="project-card-topo">
-            <span class="project-icon"><i class="bi bi-shield-lock-fill"></i></span>
-            <span class="project-tag-status">Pesquisa</span>
-          </div>
-          <h3 class="project-titulo">Criptografia Quântica · QuIIN</h3>
-          <p class="project-resumo">Automação, aquisição e processamento de dados para sistemas de criptografia quântica.</p>
-          <div class="project-tags">
-            <span>Python</span>
-            <span>Automação</span>
-          </div>
-          <span class="project-ver">Ver detalhes <i class="bi bi-arrow-up-right"></i></span>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <a href="mailto:suiannecrmartinsl@gmail.com" class="project-card project-card-add h-100">
-          <span class="project-icon"><i class="bi bi-plus-lg"></i></span>
-          <h3 class="project-titulo">Novo projeto em breve</h3>
-          <p class="project-resumo">Este espaço está reservado para o próximo projeto. Fale comigo se quiser saber mais.</p>
-        </a>
-      </div>
-
-    </div>
-  </div>
+  <div id="projetos-explorer-root"></div>
 </section>
 
 <!-- Modal de detalhes do projeto -->
@@ -233,7 +174,7 @@
 
 <!-- Componente React "Skills Explorer" (build gerado com Vite a partir de /skills-explorer-src) -->
 <script src="./assets/skills-explorer.js"></script>
-
+<script src="./assets/projetos-explorer.js"></script>
 <script>
   // Preenche o modal com os dados do card clicado
   const modalProjeto = document.getElementById('modalProjeto');
